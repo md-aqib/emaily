@@ -20,8 +20,8 @@ app.use(
     keys: [keys.cookieKey]
   })
 );
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize());// telling passport use cookies
+app.use(passport.session());   // and manage authentication
 
 require('./routes/authRoutes')(app);
 // require('./routes/billingRoutes')(app);
