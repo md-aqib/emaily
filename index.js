@@ -9,7 +9,9 @@ require('./models/User');
 require('./services/passport');
 
 // mongoose.Promise = global.Promise;
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, { useUnifiedTopology: true })
+  .then(() => console.log('Database connected...'))
+  .catch(e => console.log('Database connection err: ', e))
 
 const app = express();
 

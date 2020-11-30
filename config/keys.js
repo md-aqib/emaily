@@ -1,9 +1,8 @@
-require('dotenv').config()
-
-module.exports = {
-    googleClientID:
-      '76928983917-c9atlhnui6fl2tr36rqj8ji8t9glbsat.apps.googleusercontent.com',
-    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    mongoURI: "mongodb://localhost:27017/emaily",
-    cookieKey: '123123123',
-  };
+if (process.env.NODE_ENV === 'production') {
+  //when we are using heroku NODE_ENV variable automatic set eaqual to production
+  module.exports = require('./prod');
+// } else if (process.env.NODE_ENV === 'ci') {
+//   module.exports = require('./ci');
+} else {
+  module.exports = require('./dev');
+}
