@@ -9,7 +9,7 @@ require('./models/User');
 require('./services/passport');
 
 // mongoose.Promise = global.Promise;
-mongoose.connect(keys.mongoURI, { useUnifiedTopology: true })
+mongoose.connect(keys.mongoURI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => console.log('Database connected...'))
   .catch(e => console.log('Database connection err: ', e))
 
