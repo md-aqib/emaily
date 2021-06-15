@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const morgan = require('morgan');
 // const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
@@ -41,6 +42,7 @@ require('./routes/authRoutes')(app);
 //     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 //   });
 // }
+app.use(morgan('combined'))
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
