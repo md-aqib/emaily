@@ -7,5 +7,6 @@ module.exports = {
     mongoURI: process.env.MONGO_URI,
     cookieKey: '123123123ggfxgxfgdh',
     stripePublishableKey: 'pk_test_51JH5QMSCm4PrTlRfuTsIDkhCZjQ3FOCg7a6QCwMA9LsTHeVUsNCeeyUIsbEdfpVlgw066I1Tt10re2l8DA0TLu59009mBlffUW',
-    stripeSecretKey: 'sk_test_51JH5QMSCm4PrTlRfTWS7Z1nZnE0cyPeMO1dTA9YCZwMD6ZZpOtbcFb0HErvx8vMiNJbTVjZOS8EieJV5tbN8m04r004k3nGLvn'
+    stripeSecretKey: 'sk_test_51JH5QMSCm4PrTlRfTWS7Z1nZnE0cyPeMO1dTA9YCZwMD6ZZpOtbcFb0HErvx8vMiNJbTVjZOS8EieJV5tbN8m04r004k3nGLvn',
+    sendGridKey: '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'
   };
